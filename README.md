@@ -1,5 +1,7 @@
 # OpenAI o1-preview vs Claude 3.5 Sonnet comparison
 
+I've asked 10 "hard" questions to OpenAI's o1-preview and Anthropic's Claude 3.5 Sonnet.
+
 ## Q1: write a svg valid file that represents an unicorn
 | o1 | Claude |
 |----------|----------|
