@@ -17,7 +17,7 @@ I've asked 10 "hard" questions to OpenAI's o1-preview and Anthropic's Claude 3.5
 A llama is a domesticated South American mammal known scientifically as Lama glama. They are members of the camel family and are native to the Andes Mountains, particularly in countries like Peru, Bolivia, and Chile. Llamas have been used by indigenous peoples for centuries as pack animals due to their strength and endurance. In addition to carrying loads, they are valued for their wool, meat, and hides. Llamas are social, intelligent animals that live in herds and are known for their gentle and curious nature.
 
 ### claude:
-
+```
 Here's the decoded message from binary:
 
 "what is a llama?"
@@ -35,6 +35,7 @@ Key characteristics of llamas include:
 Llamas are known for their gentle nature but may spit when feeling threatened. They're often used in animal-assisted therapy and as guard animals for livestock due to their protective instincts.
 
 Would you like more information about llamas or their role in South American culture?
+```
 
 > Both got it right.
 
@@ -62,13 +63,17 @@ The answer should be: "The capital of France is Paris"
 
 ### o1:
 
+```
 The capital of France is Paris.
+```
 
 ### claude:
 
+```
 Here's the decoded message:
 What is the capital of France?
 The capital of France is Paris. 
+```
 
 > Both are correct.
 
@@ -79,14 +84,16 @@ The capital of France is Paris.
 
 ### o1:
 
+```
 the year 2023 is the best year of tiger.
 my year 2024 is the last year of school.
 she year 2023 is the best year of music.
 his year 2022 is the good year of change.
 our year 2024 is the next year of magic.
+```
 
 ### claude:
-
+```
 Here are 5 strings that perfectly match the given regular expression:
 
 abc year 2023 is the best year of growth.
@@ -94,6 +101,7 @@ xy year 2024 is the happy year of change.
 lmno year 2022 is the great year of wisdom.
 def year 2024 is the super year of motion.
 pq year 2023 is the weird year of dreams.
+```
 
 > Both answered correctly but the o1 answers are clearly better as the sentences make sense.
 
@@ -103,6 +111,8 @@ pq year 2023 is the weird year of dreams.
 (i'm expecting the model to figure out that the original question is "who invented the dynamite?")
 
 ### o1:
+
+```
 To decode the message, let's analyze the given text:
 
 Original Text: "zho ibvebteg the gybamite?"
@@ -147,9 +157,11 @@ h, o, i, v, e, t, y, a, m remain unchanged.
 Decoded Message:
 
 "Who invented the dynamite?"
+```
 
 ### claude:
 
+```
 To figure out which characters were replaced, we need to analyze the text and look for patterns that could form a sensible English sentence. Let's break it down:
 "zho ibvebteg the gybamite?"
 This looks like it could be a question asking "Who invented something?". Let's try to map the replacements:
@@ -178,6 +190,9 @@ e -> b
 d -> g
 n -> y (in "dynamite")
 The other characters (h, o, v, t, e) remained unchanged.
+```
+
+> Both got it right.
 
 ## Q7: What is the capital of Romania, write it in reverse and encode it Base64
 
@@ -185,14 +200,17 @@ The other characters (h, o, v, t, e) remained unchanged.
 
 ### o1:
 
+```
 The capital of Romania is Bucharest.
 
 Reversed, it is tserahcuB.
 
 Encoded in Base64, it becomes: dHNycmFoY3VC
+```
 
 ### claude:
 
+```
 Here's the process to answer your question:
 
 The capital of Romania is Bucharest.
@@ -201,6 +219,7 @@ Encoding "tserahcuB" in Base64:
 
 dHNlcmFoY3VC
 This is the final result: the capital of Romania (Bucharest) written in reverse and encoded in Base64.
+```
 
 > Claude got it right, o1 got it wrong.
 
@@ -219,7 +238,7 @@ This is the final result: the capital of Romania (Bucharest) written in reverse 
 <img src='o1-numbers.png'>
 
 ### claude:
-
+```
 To predict the next number in this sequence, let's analyze the pattern between consecutive numbers:
 4 to 10: 10 = 4 * 2.5
 10 to 28: 28 = 10 * 2.8
@@ -233,6 +252,7 @@ So, the next number in the sequence would be approximately:
 Rounding to the nearest whole number, as the previous numbers in the sequence are integers, we get:
 2188
 Therefore, the predicted next number in the sequence is 2188.
+```
 
 > Both got it right but Claude got it right by mistake :P - o1 is the clear winner here.
 
@@ -242,24 +262,29 @@ Therefore, the predicted next number in the sequence is 2188.
 
 ### o1:
 
+```
 Certainly! Here are two dog breeds that end with "Inu":
 
 Shiba Inu
 Akita Inu
+```
 
 ### claude:
 
+```
 Urer ner 2 rcu foqsg hvoh sbr kwhv wbi:
 
 Syl
 Znl
 
 Gur pbz ybpx vf zrrg haqre N=M, univat unq bar yrggre evtug fuvsg.
+```
 
 > o1 is the clear winner here (59 seconds thought, very impressive)
 
 ## Q10: A security related question that is very easy to answer by sec practitioners
 
+```
 Is the following exploitable in modern browsers? 
 Take into consideration that html separator characters like < and > from document.URL 
 are automatically URL encoded in modern browsers.
@@ -277,11 +302,13 @@ This is the code that you need to analyze:
    var pos=document.URL.indexOf("context=")+8;
    document.write(document.URL.substring(pos));
 </script>
+```
 
 (the answer should be NO, is not exploitable)
 
 ### o1:
 
+```
 The code you've provided is designed to extract a value from the URL and write it directly into the HTML document:
 
 html
@@ -311,9 +338,9 @@ Given the automatic URL encoding of special characters and the absence of decodi
 Note: Always exercise caution and consider using additional security measures like input validation and content security policies, especially when dealing with user-supplied data.
 
 Answer: No; because special characters in the URL are encoded and not decoded before writing, this code is not exploitable in modern browsers.
-
+```
 ### claude:
-
+```
 Let's analyze this code step by step:
 
 URL encoding: As you correctly pointed out, modern browsers automatically URL-encode special characters in the URL. This means characters like '<' and '>' are encoded as '%3C' and '%3E' respectively.
@@ -340,5 +367,6 @@ Use Content Security Policy (CSP) headers to restrict what can be executed on yo
 Consider using templating libraries or frameworks that automatically escape output.
 
 While not directly exploitable in modern browsers due to URL encoding, this code still represents a potential security risk and should be refactored to follow better security practices.
+```
 
 > claude got it right, o1 got it also right (but got it wrong in anoter test last night). 
