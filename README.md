@@ -369,4 +369,4 @@ Consider using templating libraries or frameworks that automatically escape outp
 While not directly exploitable in modern browsers due to URL encoding, this code still represents a potential security risk and should be refactored to follow better security practices.
 ```
 
-> claude got it right, o1 got it also right (but got it wrong in anoter test last night). 
+> claude got it right, o1 got it also right (but got it wrong in an earlier test). 
